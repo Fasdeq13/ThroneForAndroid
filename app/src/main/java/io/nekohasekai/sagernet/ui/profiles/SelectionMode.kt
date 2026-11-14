@@ -123,6 +123,16 @@ class SelectionMode(private val host: ConfigurationFragment) {
         refreshPinTitle()
     }
 
+    private fun invertSelection() {
+        val shown = host.listFor(groupId)?.adapter?.displayedIds ?: return
+        for (id in shown) {
+            if (!checked.remove(id)) checked.add(id)
+        }
+        if (checked.isEmpty()) return finish()
+        host.onSelectionChanged(null)
+        refreshPinTitle()
+    }
+
     /** Every checked profile is pinned, so the action unpins (refresh_pin_action). */
     private fun allPinned(): Boolean {
         val adapter = host.listFor(groupId)?.adapter ?: return false
@@ -155,6 +165,7 @@ class SelectionMode(private val host: ConfigurationFragment) {
             }
 
             R.id.action_selection_all -> selectAll()
+            R.id.action_selection_invert -> invertSelection()
             R.id.action_selection_delete -> delete(ids)
             R.id.action_selection_pin -> pin(ids)
             R.id.action_selection_clear_results -> clearResults(ids)
