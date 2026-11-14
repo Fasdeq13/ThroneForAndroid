@@ -975,6 +975,7 @@
     <string name="profiles_resolve_domain">Разрешить домен</string>
     <string name="profiles_running_kept">Работающий профиль сохранён.</string>
     <string name="profiles_select_all">Выбрать все</string>
+    <string name="profiles_invert_selection">Инвертировать выбор</string>
     <string name="profiles_show">Показать</string>
     <string name="profiles_show_out_ip">Внешний IP</string>
     <string name="profiles_show_speed">Скорость</string>
