@@ -1302,6 +1302,7 @@
         <item quantity="other">%d selected</item>
     </plurals>
     <string name="profiles_select_all">Select all</string>
+    <string name="profiles_invert_selection">Invert selection</string>
     <string name="profiles_move_to_group">Move to group</string>
     <string name="profiles_move_no_target">There is no other basic group to move to.</string>
     <plurals name="profiles_moved">
